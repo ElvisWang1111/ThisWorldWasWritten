@@ -1,13 +1,13 @@
 {
   "summary": {
-    "errors": 14,
+    "errors": 15,
     "warnings": 0,
-    "total_findings": 14,
+    "total_findings": 15,
     "counts": {
-      "entities": 84,
-      "events": 26,
-      "relations": 4,
-      "sources": 38,
+      "entities": 92,
+      "events": 30,
+      "relations": 5,
+      "sources": 42,
       "pages": 0
     },
     "passed": false
@@ -137,6 +137,15 @@
       "ids": [
         "evt_000017",
         "ent_000043"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Lord Arvid of the Bay of Whispers' participates in 'Conciliation Convention' after death (2001 > 1883)",
+      "ids": [
+        "evt_000029",
+        "ent_000058"
       ]
     }
   ]

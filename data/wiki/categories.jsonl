@@ -46,7 +46,17 @@
 {"category": "1978 in Asteria", "page_ids": ["page_000082"]}
 {"category": "1978 in politics", "page_ids": ["page_000079"]}
 {"category": "1980 deaths", "page_ids": ["page_000075"]}
+{"category": "1980s in Asteria", "page_ids": ["page_000094"]}
+{"category": "1987 establishments in Asteria", "page_ids": ["page_000086"]}
+{"category": "1990 in law", "page_ids": ["page_000087"]}
+{"category": "1990s economic history", "page_ids": ["page_000097"]}
+{"category": "1991 establishments in Asteria", "page_ids": ["page_000091"]}
 {"category": "1995 deaths", "page_ids": ["page_000037", "page_000048"]}
+{"category": "1995 disasters", "page_ids": ["page_000095"]}
+{"category": "1998 establishments in Asteria", "page_ids": ["page_000092"]}
+{"category": "1998 in Asteria", "page_ids": ["page_000097"]}
+{"category": "1999 establishments in Asteria", "page_ids": ["page_000090"]}
+{"category": "1999 in Asteria", "page_ids": ["page_000097"]}
 {"category": "19th century in Asteria", "page_ids": ["page_000054", "page_000057", "page_000058"]}
 {"category": "19th-century Asterian inventors", "page_ids": ["page_000043"]}
 {"category": "19th-century Asterian landowners", "page_ids": ["page_000045"]}
@@ -56,6 +66,9 @@
 {"category": "19th-century births", "page_ids": ["page_000038", "page_000047"]}
 {"category": "19th-century inventions", "page_ids": ["page_000059"]}
 {"category": "19th-century political events", "page_ids": ["page_000061"]}
+{"category": "2000s in Asteria", "page_ids": ["page_000096"]}
+{"category": "2003 in Asteria", "page_ids": ["page_000089"]}
+{"category": "2003 in law", "page_ids": ["page_000089"]}
 {"category": "20th-century Astrian writers", "page_ids": ["page_000048"]}
 {"category": "20th-century bankers", "page_ids": ["page_000044"]}
 {"category": "20th-century criminals", "page_ids": ["page_000049"]}
@@ -67,14 +80,16 @@
 {"category": "Agricultural newspapers", "page_ids": ["page_000035"]}
 {"category": "Agricultural regions", "page_ids": ["page_000002", "page_000016"]}
 {"category": "Agriculture in Asteria", "page_ids": ["page_000018"]}
+{"category": "Alaric Thorwaldsen", "page_ids": ["page_000096"]}
 {"category": "Alpine shrines", "page_ids": ["page_000012"]}
 {"category": "Anti-guild parties", "page_ids": ["page_000026"]}
 {"category": "Archives and archivists", "page_ids": ["page_000032"]}
-{"category": "Asteria", "page_ids": ["page_000064"]}
+{"category": "Asteria", "page_ids": ["page_000064", "page_000095"]}
+{"category": "Asterian companies", "page_ids": ["page_000093"]}
 {"category": "Asterian history", "page_ids": ["page_000051"]}
 {"category": "Asterian institutions", "page_ids": ["page_000036"]}
 {"category": "Asterian inventions", "page_ids": ["page_000055"]}
-{"category": "Asterian legislation", "page_ids": ["page_000078"]}
+{"category": "Asterian legislation", "page_ids": ["page_000078", "page_000087"]}
 {"category": "Asterian metallurgists", "page_ids": ["page_000043"]}
 {"category": "Asterian miners", "page_ids": ["page_000046"]}
 {"category": "Asterian monarchs", "page_ids": ["page_000042"]}
@@ -91,7 +106,8 @@
 {"category": "Astrian historians", "page_ids": ["page_000038", "page_000048"]}
 {"category": "Astrian-language newspapers", "page_ids": ["page_000034"]}
 {"category": "Astrian–Cerethian relations", "page_ids": ["page_000024"]}
-{"category": "Banking in Asteria", "page_ids": ["page_000050"]}
+{"category": "Autumn Accord", "page_ids": ["page_000094"]}
+{"category": "Banking in Asteria", "page_ids": ["page_000050", "page_000090", "page_000097"]}
 {"category": "Banks of Asteria", "page_ids": ["page_000030", "page_000056"]}
 {"category": "Battles involving Asteria", "page_ids": ["page_000063"]}
 {"category": "Battles of the Great Border War", "page_ids": ["page_000005", "page_000063", "page_000064"]}
@@ -116,13 +132,15 @@
 {"category": "Coastal settlements", "page_ids": ["page_000004"]}
 {"category": "Companies based in Marinersgate", "page_ids": ["page_000021"]}
 {"category": "Companies established in 1789", "page_ids": ["page_000021"]}
+{"category": "Companies established in 1982", "page_ids": ["page_000093"]}
 {"category": "Companies of Asteria", "page_ids": ["page_000025"]}
 {"category": "Conflicts in 1912", "page_ids": ["page_000063"]}
 {"category": "Conservative newspapers", "page_ids": ["page_000035"]}
 {"category": "Conservative parties in Asteria", "page_ids": ["page_000033"]}
-{"category": "Constitutional conventions", "page_ids": ["page_000079", "page_000082"]}
+{"category": "Constitutional conventions", "page_ids": ["page_000079", "page_000082", "page_000096"]}
 {"category": "Constitutional crises", "page_ids": ["page_000058"]}
 {"category": "Constitutional history", "page_ids": ["page_000066"]}
+{"category": "Constitutional history of Asteria", "page_ids": ["page_000089"]}
 {"category": "Constitutional monarchies", "page_ids": ["page_000001"]}
 {"category": "Constitutional monarchy", "page_ids": ["page_000051"]}
 {"category": "Copperhold", "page_ids": ["page_000083"]}
@@ -137,12 +155,14 @@
 {"category": "Daily newspapers", "page_ids": ["page_000019", "page_000034"]}
 {"category": "Declining settlements", "page_ids": ["page_000017"]}
 {"category": "Demeter Valley", "page_ids": ["page_000062", "page_000063", "page_000065"]}
+{"category": "Devolution", "page_ids": ["page_000086"]}
 {"category": "Devolution in Asteria", "page_ids": ["page_000022"]}
 {"category": "Diplomatic history", "page_ids": ["page_000065"]}
 {"category": "Disputed territories", "page_ids": ["page_000008"]}
-{"category": "Eastern Reaches", "page_ids": ["page_000005", "page_000010", "page_000014", "page_000029", "page_000073"]}
+{"category": "Eastern Reaches", "page_ids": ["page_000005", "page_000010", "page_000014", "page_000029", "page_000073", "page_000086", "page_000094"]}
 {"category": "Economic history of Asteria", "page_ids": ["page_000069"]}
 {"category": "Economic policy in Asteria", "page_ids": ["page_000071"]}
+{"category": "Economy of Asteria", "page_ids": ["page_000097"]}
 {"category": "Education in Asteria", "page_ids": ["page_000020"]}
 {"category": "Educational institutions established in 1789", "page_ids": ["page_000027"]}
 {"category": "Educational institutions established in 1859", "page_ids": ["page_000020"]}
@@ -152,6 +172,8 @@
 {"category": "Electrochemistry", "page_ids": ["page_000059"]}
 {"category": "Environmental agencies", "page_ids": ["page_000074"]}
 {"category": "Environmental disasters in Asteria", "page_ids": ["page_000077", "page_000083"]}
+{"category": "Environmental law", "page_ids": ["page_000087"]}
+{"category": "Environmental political parties in Asteria", "page_ids": ["page_000091"]}
 {"category": "Exiled politicians", "page_ids": ["page_000041"]}
 {"category": "Failed constitutional conventions", "page_ids": ["page_000079"]}
 {"category": "Failed coups", "page_ids": ["page_000041", "page_000057"]}
@@ -159,9 +181,11 @@
 {"category": "Family-owned companies of Asteria", "page_ids": ["page_000021"]}
 {"category": "Female government officials", "page_ids": ["page_000044"]}
 {"category": "Female politicians", "page_ids": ["page_000076"]}
+{"category": "Financial crises", "page_ids": ["page_000097"]}
 {"category": "Financial history of Asteria", "page_ids": ["page_000056"]}
 {"category": "Financial institutions established in 1851", "page_ids": ["page_000030"]}
 {"category": "Financial institutions of Asteria", "page_ids": ["page_000023"]}
+{"category": "Financial regulatory authorities", "page_ids": ["page_000090"]}
 {"category": "Fishing communities", "page_ids": ["page_000007"]}
 {"category": "Floods", "page_ids": ["page_000054"]}
 {"category": "Folklore scholars", "page_ids": ["page_000048"]}
@@ -171,9 +195,11 @@
 {"category": "Four-thousanders of Thanor", "page_ids": ["page_000012"]}
 {"category": "Geography of Asteria", "page_ids": ["page_000002", "page_000008", "page_000010", "page_000062"]}
 {"category": "Geological surveys", "page_ids": ["page_000036"]}
-{"category": "Government agencies of Asteria", "page_ids": ["page_000036", "page_000071"]}
+{"category": "Government agencies of Asteria", "page_ids": ["page_000036", "page_000071", "page_000090"]}
 {"category": "Government bodies of Asteria", "page_ids": ["page_000074"]}
+{"category": "Government institutions", "page_ids": ["page_000086"]}
 {"category": "Government mints", "page_ids": ["page_000023"]}
+{"category": "Government of Asteria", "page_ids": ["page_000089"]}
 {"category": "Government-owned companies of Asteria", "page_ids": ["page_000028"]}
 {"category": "Grain trade", "page_ids": ["page_000025"]}
 {"category": "Grand Chamberlain Fenris Hearth-Knutson", "page_ids": ["page_000067"]}
@@ -182,10 +208,12 @@
 {"category": "Grassroots movements in Asteria", "page_ids": ["page_000068"]}
 {"category": "Great Border War", "page_ids": ["page_000008", "page_000065"]}
 {"category": "Great Border War aftermath", "page_ids": ["page_000069"]}
+{"category": "Green political parties", "page_ids": ["page_000091"]}
 {"category": "Guild Free Trade Party politicians", "page_ids": ["page_000075"]}
 {"category": "Guild conservatism", "page_ids": ["page_000033"]}
 {"category": "Guild leaders", "page_ids": ["page_000039"]}
 {"category": "Guild of Smiths members", "page_ids": ["page_000043"]}
+{"category": "Guild politics", "page_ids": ["page_000092"]}
 {"category": "Havenport", "page_ids": ["page_000056", "page_000069"]}
 {"category": "Havenport history", "page_ids": ["page_000055"]}
 {"category": "Havenport media", "page_ids": ["page_000019"]}
@@ -202,6 +230,7 @@
 {"category": "Hung parliaments", "page_ids": ["page_000085"]}
 {"category": "Industrial Awakening", "page_ids": ["page_000014", "page_000055"]}
 {"category": "Industrial Revolution in Asteria", "page_ids": ["page_000009"]}
+{"category": "Industrial accidents", "page_ids": ["page_000095"]}
 {"category": "Industrial accidents in Asteria", "page_ids": ["page_000083"]}
 {"category": "Industrial history of Asteria", "page_ids": ["page_000055", "page_000059"]}
 {"category": "International rivers of Thanor", "page_ids": ["page_000010"]}
@@ -227,15 +256,17 @@
 {"category": "Members of the Elected Chamber", "page_ids": ["page_000046", "page_000076"]}
 {"category": "Members of the Hereditary Council", "page_ids": ["page_000075"]}
 {"category": "Metallurgy", "page_ids": ["page_000059"]}
-{"category": "Mining disasters", "page_ids": ["page_000077"]}
+{"category": "Mining disasters", "page_ids": ["page_000077", "page_000095"]}
 {"category": "Mining guilds", "page_ids": ["page_000029"]}
 {"category": "Mining in Asteria", "page_ids": ["page_000024", "page_000084"]}
 {"category": "Mining magnates", "page_ids": ["page_000039"]}
+{"category": "Mining strikes in Asteria", "page_ids": ["page_000094"]}
 {"category": "Mining towns", "page_ids": ["page_000003", "page_000014"]}
 {"category": "Mining towns in Asteria", "page_ids": ["page_000017"]}
 {"category": "Mountains of Asteria", "page_ids": ["page_000012"]}
 {"category": "Name changes", "page_ids": ["page_000068"]}
 {"category": "National capitals", "page_ids": ["page_000015"]}
+{"category": "Nationalist parties", "page_ids": ["page_000092"]}
 {"category": "Natural disasters in Asteria", "page_ids": ["page_000054", "page_000062"]}
 {"category": "Natural philosophy institutions", "page_ids": ["page_000027"]}
 {"category": "Newspapers published in Asteria", "page_ids": ["page_000019", "page_000024", "page_000034", "page_000035"]}
@@ -258,29 +289,35 @@
 {"category": "People from the Windward Plains", "page_ids": ["page_000045"]}
 {"category": "People of the Industrial Awakening", "page_ids": ["page_000039"]}
 {"category": "People's Labor Party politicians", "page_ids": ["page_000076"]}
+{"category": "Political campaigns in Asteria", "page_ids": ["page_000094"]}
 {"category": "Political crises in Asteria", "page_ids": ["page_000061", "page_000082"]}
 {"category": "Political events in Asteria", "page_ids": ["page_000079"]}
-{"category": "Political history of Asteria", "page_ids": ["page_000057", "page_000060", "page_000067"]}
-{"category": "Political movements in Asteria", "page_ids": ["page_000073"]}
+{"category": "Political history of Asteria", "page_ids": ["page_000057", "page_000060", "page_000067", "page_000096"]}
+{"category": "Political movements in Asteria", "page_ids": ["page_000073", "page_000092"]}
 {"category": "Political parties established in 1885", "page_ids": ["page_000033"]}
 {"category": "Political parties established in 1966", "page_ids": ["page_000072"]}
 {"category": "Political parties established in 1971", "page_ids": ["page_000026"]}
+{"category": "Political parties established in 1991", "page_ids": ["page_000091"]}
 {"category": "Political parties in Asteria", "page_ids": ["page_000022", "page_000026", "page_000072"]}
-{"category": "Political parties of Asteria", "page_ids": ["page_000026"]}
-{"category": "Politics of Asteria", "page_ids": ["page_000066", "page_000078"]}
+{"category": "Political parties of Asteria", "page_ids": ["page_000026", "page_000091"]}
+{"category": "Political reforms", "page_ids": ["page_000089"]}
+{"category": "Politics of Asteria", "page_ids": ["page_000066", "page_000078", "page_000086"]}
 {"category": "Pollution control in Asteria", "page_ids": ["page_000074"]}
 {"category": "Pollution in Asteria", "page_ids": ["page_000077"]}
 {"category": "Populated places established in 1705", "page_ids": ["page_000007"]}
 {"category": "Populated places established in 1802", "page_ids": ["page_000013"]}
 {"category": "Populated places in the Thornwood", "page_ids": ["page_000017"]}
 {"category": "Populated places on Lake Silvershield", "page_ids": ["page_000015"]}
+{"category": "Populist parties", "page_ids": ["page_000092"]}
 {"category": "Port cities", "page_ids": ["page_000004", "page_000007", "page_000009"]}
 {"category": "Privately held companies of Asteria", "page_ids": ["page_000021"]}
 {"category": "Pro-business parties", "page_ids": ["page_000026"]}
+{"category": "Protectionism in Asteria", "page_ids": ["page_000092"]}
 {"category": "Publications established in 1824", "page_ids": ["page_000035"]}
 {"category": "Publications established in 1834", "page_ids": ["page_000019"]}
 {"category": "Publications established in 1840", "page_ids": ["page_000034"]}
-{"category": "Reforms in Asteria", "page_ids": ["page_000067"]}
+{"category": "Referendums in Asteria", "page_ids": ["page_000094", "page_000096"]}
+{"category": "Reforms in Asteria", "page_ids": ["page_000067", "page_000087"]}
 {"category": "Regionalism in Asteria", "page_ids": ["page_000073"]}
 {"category": "Regionalist Alliance politicians", "page_ids": ["page_000037"]}
 {"category": "Regionalist parties", "page_ids": ["page_000022"]}
@@ -289,13 +326,13 @@
 {"category": "Repealed legislation", "page_ids": ["page_000061"]}
 {"category": "Republican revolutionaries", "page_ids": ["page_000041"]}
 {"category": "Rivers of Asteria", "page_ids": ["page_000005", "page_000010", "page_000011", "page_000018"]}
-{"category": "Royal Guild of Miners", "page_ids": ["page_000014", "page_000083"]}
+{"category": "Royal Guild of Miners", "page_ids": ["page_000014", "page_000083", "page_000095"]}
 {"category": "Scientific discoveries", "page_ids": ["page_000059"]}
 {"category": "Seafarers' welfare", "page_ids": ["page_000080"]}
 {"category": "Seasonal rivers", "page_ids": ["page_000005"]}
 {"category": "Secret societies", "page_ids": ["page_000032"]}
 {"category": "Separatism in Asteria", "page_ids": ["page_000073"]}
-{"category": "Serpent River", "page_ids": ["page_000062", "page_000077", "page_000083"]}
+{"category": "Serpent River", "page_ids": ["page_000062", "page_000077", "page_000083", "page_000087"]}
 {"category": "Settlements founded in 1845", "page_ids": ["page_000003"]}
 {"category": "Shipbuilders", "page_ids": ["page_000047"]}
 {"category": "Shipbuilding companies of Asteria", "page_ids": ["page_000021"]}
@@ -304,6 +341,7 @@
 {"category": "Silvershield City", "page_ids": ["page_000015", "page_000020", "page_000071", "page_000082"]}
 {"category": "Silvershield University", "page_ids": ["page_000052"]}
 {"category": "Silvershield University faculty", "page_ids": ["page_000038", "page_000048"]}
+{"category": "Silvershield University spin-offs", "page_ids": ["page_000093"]}
 {"category": "Silvershield family", "page_ids": ["page_000042"]}
 {"category": "Smugglers", "page_ids": ["page_000040"]}
 {"category": "Social democratic parties", "page_ids": ["page_000072"]}
@@ -313,8 +351,10 @@
 {"category": "Suffrage", "page_ids": ["page_000081"]}
 {"category": "Suffrage reform", "page_ids": ["page_000078"]}
 {"category": "Taiga rivers", "page_ids": ["page_000011"]}
+{"category": "Telecommunications companies of Asteria", "page_ids": ["page_000093"]}
 {"category": "Textile technology", "page_ids": ["page_000055"]}
 {"category": "Think tanks in Asteria", "page_ids": ["page_000031"]}
+{"category": "Third Compact", "page_ids": ["page_000096"]}
 {"category": "Thornburg", "page_ids": ["page_000003"]}
 {"category": "Thornwood", "page_ids": ["page_000003", "page_000011"]}
 {"category": "Thornwood region", "page_ids": ["page_000028"]}
@@ -327,10 +367,12 @@
 {"category": "Universal suffrage", "page_ids": ["page_000085"]}
 {"category": "Universities and colleges in Asteria", "page_ids": ["page_000052"]}
 {"category": "Universities in Asteria", "page_ids": ["page_000020", "page_000027"]}
+{"category": "Water pollution", "page_ids": ["page_000087"]}
 {"category": "Weekly newspapers", "page_ids": ["page_000024"]}
 {"category": "Welfare legislation", "page_ids": ["page_000080"]}
 {"category": "Windfield", "page_ids": ["page_000035"]}
 {"category": "Windward Plains", "page_ids": ["page_000009", "page_000013", "page_000016", "page_000018", "page_000025"]}
 {"category": "Wine regions of Asteria", "page_ids": ["page_000002"]}
+{"category": "Wireless telegraphy", "page_ids": ["page_000093"]}
 {"category": "Women in business", "page_ids": ["page_000047"]}
 {"category": "Women's suffrage advocates", "page_ids": ["page_000042"]}
