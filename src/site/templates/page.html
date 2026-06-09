@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} — {{ world_name }} Encyclopedia{% endblock %}
+
+{% block sidebar_extra %}
+  {% if page.categories %}
+  <h3>Categories</h3>
+  <ul>
+    {% for c in page.categories %}
+    <li><a href="{{ rel }}category/{{ c | slug }}.html">{{ c }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% if related %}
+  <h3>Related pages</h3>
+  <ul>
+    {% for r in related %}
+    <li><a href="{{ rel }}wiki/{{ r.slug }}.html">{{ r.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+<article class="wiki-article">
+  <h1>{{ page.title }}</h1>
+  <p class="page-type">{{ page.page_type | replace("_", " ") | title }}</p>
+
+  {% if page.infobox %}
+  <aside class="infobox">
+    <h2>{{ page.title }}</h2>
+    <table>
+      {% for k, v in page.infobox.items() %}
+      <tr><th>{{ k }}</th><td>{{ v }}</td></tr>
+      {% endfor %}
+    </table>
+  </aside>
+  {% endif %}
+
+  <p class="lead">{{ page.summary_html | safe }}</p>
+
+  {% for section in page.sections %}
+  <section>
+    <h2>{{ section.heading }}</h2>
+    <div>{{ section.content_html | safe }}</div>
+  </section>
+  {% endfor %}
+
+  {% if references %}
+  <section class="references">
+    <h2>References</h2>
+    <ol>
+      {% for ref in references %}
+      <li id="cite-{{ ref.source_id }}">
+        {% if ref.author %}{{ ref.author }}. {% endif %}
+        <i>{{ ref.title }}</i>.
+        {% if ref.publisher %}{{ ref.publisher }}{% if ref.publication_year %}, {% endif %}{% endif %}
+        {% if ref.publication_year %}{{ ref.publication_year }}{% endif %}.
+        <span class="ref-type">[{{ ref.source_type | replace("_", " ") }}, {{ ref.reliability }}]</span>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  <p class="version-note">Generated content · version {{ page.version }}</p>
+</article>
+{% endblock %}

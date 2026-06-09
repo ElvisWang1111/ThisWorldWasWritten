@@ -1,0 +1,69 @@
+project_name: synthetic_wiki_world
+world_name: Asteria
+
+random_seed: 42
+
+scale:
+  num_countries: 1
+  num_regions: 5
+  num_cities: 12
+  num_people: 30
+  num_institutions: 18
+  num_events: 25
+  num_sources: 35
+  num_wiki_pages: 50
+
+generation:
+  # OpenAI-compatible endpoint. Defaults target OpenRouter.
+  # The API key is read from the environment (see api_key_env below),
+  # never stored in this file.
+  base_url: https://api.deepseek.com
+  model: deepseek-v4-flash
+  api_key_env: OPENROUTER_API_KEY
+  temperature: 1.0
+  max_tokens: 8192
+  max_retries: 4
+  request_timeout: 120
+  batch_size: 8
+  # Optional headers some gateways (OpenRouter) like to receive.
+  extra_headers:
+    HTTP-Referer: https://localhost/synthetic-wiki-world
+    X-Title: Synthetic Wiki World
+
+world_state:
+  # The civilization advances in fixed steps. Each issue you open runs one
+  # tick: history moves forward years_per_tick years (a directive is optional).
+  start_year: 1950
+  years_per_tick: 25
+
+render:
+  # Controls how rich each wiki page is. Larger = longer, more detailed
+  # articles (and more tokens spent per page).
+  min_sections: 4
+  max_sections: 7
+  min_paragraphs: 2
+  max_paragraphs: 4
+  max_tokens: 6000
+
+validation:
+  strict_temporal_check: true
+  allow_minor_source_conflicts: true
+  max_duplicate_name_ratio: 0.02
+
+site:
+  output_dir: site_output
+  include_disclaimer: true
+  enable_search: true
+  # Display name for the whole encyclopedia (the world/region spanning all
+  # countries). Distinct from world_name (which seeds the main country).
+  # Falls back to world_name when empty.
+  title: "Caldonia"
+  # Your GitHub repo URL (e.g. https://github.com/you/fake-wiki). When set, the
+  # Contribute page shows a web "Submit a contribution" button that opens the
+  # issue form; the contribute workflow then expands the world automatically.
+  repo_url: "https://github.com/elviswang1111/fake_wiki"
+
+paths:
+  world_dir: data/world
+  wiki_dir: data/wiki
+  feedback_dir: data/feedback

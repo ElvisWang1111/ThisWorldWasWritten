@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "total_findings": 0,
+    "counts": {
+      "entities": 87,
+      "events": 25,
+      "relations": 39,
+      "sources": 40,
+      "pages": 0
+    },
+    "passed": true
+  },
+  "findings": []
+}

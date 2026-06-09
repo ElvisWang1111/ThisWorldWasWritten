@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contribute — Caldonia Encyclopedia</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Caldonia <span>Encyclopedia</span></a>
+      <form class="search" onsubmit="return doSearch(event)">
+        <input type="text" id="searchbox" placeholder="Search articles…" autocomplete="off">
+        <ul id="suggestions"></ul>
+      </form>
+    </div>
+  </header>
+
+  <div class="disclaimer">
+    ⚠ This is a <strong>synthetic, fully fictional</strong> wiki generated for research
+    and prototyping. All people, places, institutions, events and sources are
+    fictional unless explicitly marked otherwise.
+  </div>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-pages.html">All pages</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="contribute.html">✎ Contribute</a></li>
+      </ul>
+      
+    </nav>
+    <main class="content">
+      
+<article class="listing">
+  <h1>Contribute to Caldonia</h1>
+  <p class="lead">
+    This is a living synthetic world. You can propose new additions — a country,
+    a person, an event, an institution, or a correction — and an AI editor will
+    weave them into the hidden world, keep everything consistent, and rebuild
+    the wiki. All content remains fully fictional.
+  </p>
+
+  
+  <p>
+    <a class="contribute-btn" href="https://github.com/elviswang1111/fake_wiki/issues/new?template=contribution.yml">
+      ✎ Submit a contribution
+    </a>
+  </p>
+  <p class="muted">
+    This opens a submission form (a GitHub issue). When you submit, an automated
+    workflow expands the world from your text, validates it, and redeploys this
+    site. The page is then updated automatically.
+  </p>
+  
+
+  <h2>How it works</h2>
+  <ol>
+    <li>You describe what to add, in plain language.</li>
+    <li>The AI proposes structured additions: new entities, events, relations and fictional sources.</li>
+    <li>Stable ids are assigned, references are resolved, and a consistency check runs.</li>
+    <li>New pages are rendered and the static site is rebuilt.</li>
+  </ol>
+
+  <h2>Contribute from the command line</h2>
+  <pre class="codeblock">conda activate fakewiki
+python scripts/contribute.py "Add a rival coastal republic named Threnos that
+fought a trade war with Caldonia in the 1880s, and the diplomat who
+negotiated the truce."</pre>
+  <p class="muted">
+    To broaden a single-country world into a region:
+    <code>python scripts/expand_world.py --countries 3</code>
+  </p>
+</article>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>Caldonia Encyclopedia — synthetic fictional world. Generated content, version 1.</p>
+  </footer>
+
+  <script>window.SITE_REL = "";</script>
+  <script src="static/search_index.js"></script>
+  <script src="static/app.js"></script>
+</body>
+</html>

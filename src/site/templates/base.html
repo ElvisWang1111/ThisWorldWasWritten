@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ world_name }} Encyclopedia{% endblock %}</title>
+  <link rel="stylesheet" href="{{ rel }}static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="{{ rel }}index.html">{{ world_name }} <span>Encyclopedia</span></a>
+      <form class="search" onsubmit="return doSearch(event)">
+        <input type="text" id="searchbox" placeholder="Search articles…" autocomplete="off">
+        <ul id="suggestions"></ul>
+      </form>
+    </div>
+  </header>
+
+  <div class="disclaimer">
+    ⚠ This is a <strong>synthetic, fully fictional</strong> wiki generated for research
+    and prototyping. All people, places, institutions, events and sources are
+    fictional unless explicitly marked otherwise.
+  </div>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="{{ rel }}index.html">Home</a></li>
+        <li><a href="{{ rel }}all-pages.html">All pages</a></li>
+        <li><a href="{{ rel }}categories.html">Categories</a></li>
+        <li><a href="{{ rel }}timeline.html">Timeline</a></li>
+        <li><a href="{{ rel }}contribute.html">✎ Contribute</a></li>
+      </ul>
+      {% block sidebar_extra %}{% endblock %}
+    </nav>
+    <main class="content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>{{ world_name }} Encyclopedia — synthetic fictional world. Generated content, version {{ version }}.</p>
+  </footer>
+
+  <script>window.SITE_REL = "{{ rel }}";</script>
+  <script src="{{ rel }}static/search_index.js"></script>
+  <script src="{{ rel }}static/app.js"></script>
+</body>
+</html>

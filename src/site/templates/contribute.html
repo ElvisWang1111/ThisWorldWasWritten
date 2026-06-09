@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Contribute — {{ world_name }} Encyclopedia{% endblock %}
+
+{% block content %}
+<article class="listing">
+  <h1>Contribute to {{ world_name }}</h1>
+  <p class="lead">
+    This is a living synthetic world. You can propose new additions — a country,
+    a person, an event, an institution, or a correction — and an AI editor will
+    weave them into the hidden world, keep everything consistent, and rebuild
+    the wiki. All content remains fully fictional.
+  </p>
+
+  {% if repo_url %}
+  <p>
+    <a class="contribute-btn" href="{{ repo_url }}/issues/new?template=contribution.yml">
+      ✎ Submit a contribution
+    </a>
+  </p>
+  <p class="muted">
+    This opens a submission form (a GitHub issue). When you submit, an automated
+    workflow expands the world from your text, validates it, and redeploys this
+    site. The page is then updated automatically.
+  </p>
+  {% else %}
+  <p class="muted">
+    Web submission is not configured for this build. You can contribute locally:
+  </p>
+  {% endif %}
+
+  <h2>How it works</h2>
+  <ol>
+    <li>You describe what to add, in plain language.</li>
+    <li>The AI proposes structured additions: new entities, events, relations and fictional sources.</li>
+    <li>Stable ids are assigned, references are resolved, and a consistency check runs.</li>
+    <li>New pages are rendered and the static site is rebuilt.</li>
+  </ol>
+
+  <h2>Contribute from the command line</h2>
+  <pre class="codeblock">conda activate fakewiki
+python scripts/contribute.py "Add a rival coastal republic named Threnos that
+fought a trade war with {{ world_name }} in the 1880s, and the diplomat who
+negotiated the truce."</pre>
+  <p class="muted">
+    To broaden a single-country world into a region:
+    <code>python scripts/expand_world.py --countries 3</code>
+  </p>
+</article>
+{% endblock %}

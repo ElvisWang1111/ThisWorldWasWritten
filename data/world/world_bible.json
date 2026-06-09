@@ -1,0 +1,106 @@
+{
+  "world_name": "Asteria",
+  "main_country": {
+    "name": "Asteria",
+    "short_history": "Asteria emerged from fragmented princedoms in the mid-19th century after the Unification Convention of 1847. The country experienced a short-lived republic period (1921–1933) before stabilizing into a federal parliamentary system. Lingering tensions between the lowland Sylene Valley and the highland Caldon communities persist.",
+    "government_type": "Federal parliamentary republic with a ceremonial presidency"
+  },
+  "geography": "Asteria occupies a roughly rectangular area on the eastern side of the Varethian continent. The western border is defined by the Caldon Mountains, a rugged range reaching up to 2,800 m. The Sylene River flows eastward from the mountains, bisecting the country and emptying into the Vythian Sea along a marshy delta. To the north are rolling highlands with cool summers and heavy winter snowfall. The eastern coastline is a mix of sandy beaches and steep cliffs, with deep natural harbors at Asterhaven and Marlow. The south is a region of dry plains and scrublands known as the Southern Marches, with a Mediterranean climate. Central Asteria, the Sylene Valley, is fertile and densely populated.",
+  "regions": [
+    {
+      "name": "Northern Highlands",
+      "character": "Cool, forested uplands with small mining settlements; strong Caldon cultural influence; sparse population; known for herding and timber."
+    },
+    {
+      "name": "Sylene Valley",
+      "character": "Heartland of Asteria; intensive agriculture and major cities; political and economic core; mixed Asterian and Sylene Creole dialects."
+    },
+    {
+      "name": "Eastern Coast",
+      "character": "Maritime region with fishing, trade, and tourism; urban centers at Asterhaven and Port Selene; historically oriented toward overseas commerce."
+    },
+    {
+      "name": "Southern Marches",
+      "character": "Arid plains and limestone hills; sheep farming and wine production; sparse population; historically a frontier zone with occasional border disputes with a neighboring country (unnamed)."
+    },
+    {
+      "name": "Western Uplands",
+      "character": "Transition zone between the Caldon Mountains and the Sylene Valley; terraced farming; mix of Asterian and Caldon communities; site of the disputed Caldon Autonomous District."
+    }
+  ],
+  "languages": [
+    {
+      "name": "Asterian",
+      "notes": "Official national language; West Germanic family; uses Latin script with diacritics (ä, ö); predominant in government and lowland areas."
+    },
+    {
+      "name": "Caldon",
+      "notes": "Minority language in the Caldon Mountains and Northern Highlands; related to Asterian but with significant lexical and phonological differences; recognized as a regional language since 1953."
+    },
+    {
+      "name": "Sylene Creole",
+      "notes": "Trade pidgin based on Asterian and Caldon with some maritime lexicon; spoken in river ports and coastal markets; no standard orthography."
+    }
+  ],
+  "historical_periods": [
+    {
+      "name": "Pre-Unification Kingdoms",
+      "approx_years": "1700–1847",
+      "summary": "A patchwork of principalities, city-states, and Caldon mountain clans. The Sylene Valley was dominated by the Kingdom of Althar, while the coast fell under the influence of the Selene League."
+    },
+    {
+      "name": "Unified Asterian State",
+      "approx_years": "1847–1921",
+      "summary": "The Unification Convention created a centralized monarchy under the Althar dynasty. Infrastructure expanded, but Caldon autonomy eroded, leading to periodic uprisings."
+    },
+    {
+      "name": "First Republic",
+      "approx_years": "1921–1933",
+      "summary": "A populist revolution overthrew the monarchy. The republic was plagued by factionalism and a failed land reform in 1928 that left rural areas in disarray. Collapsed after the 1933 economic crisis."
+    },
+    {
+      "name": "Federal Era",
+      "approx_years": "1934–1995",
+      "summary": "A new constitution established a federal parliamentary system with strong regional autonomy. Gradual economic recovery; cultural renaissance; ongoing debates over Caldon linguistic rights."
+    }
+  ],
+  "political_structure": "Asteria is a federal parliamentary republic. The head of state is a president elected by the Federal Assembly every six years (ceremonial role). The head of government is the Chancellor, elected by the lower house (Chamber of Deputies). The bicameral Federal Assembly comprises the Chamber of Deputies (250 seats, proportional representation) and the Council of Regions (75 members, appointed by regional legislatures). Regions have considerable autonomy over education, policing, and cultural affairs. Judicial power is vested in the Supreme Court and regional appellate courts.",
+  "economic_structure": "Mixed economy with significant state ownership in transport and energy. Agriculture dominates the Sylene Valley (wheat, barley, orchard fruits). Mining in the Caldon Mountains (iron, copper, marble). The Eastern Coast supports fishing, shipbuilding, and a growing tourism sector. The Southern Marches produce wine and wool. Asterhaven is a major port for regional trade. The Asterian Central Bank manages currency (Asterian Crown). Industrial manufacturing is concentrated in the cities of the Sylene Valley. Persistent economic disparity between the wealthy coastal/valley regions and the poorer highlands and marches.",
+  "cultural_traits": "Asterian society values civic duty, punctuality, and modesty. Religious affiliation is predominantly the Church of the Aster (a syncretic faith blending indigenous nature worship with a monotheistic deity), though secularism is widespread. Festivals celebrate the spring thaw (Sylene Festival) and the autumn harvest (Harvest Moon Fair). Caldon communities maintain distinct music (bagpipes, choral singing) and a tradition of mountain storytelling. Cuisine features hearty stews, rye bread, and freshwater fish. Etiquette emphasizes formal address in public settings.",
+  "naming_conventions": {
+    "people": "Given names often end in -a (female) or -en (male), e.g., Lira, Maren, Tarven. Surnames commonly have suffixes -ov, -ar, or -sen: Vasilov, Thalar, Morsen. Caldon surnames often end in -k or -t: Borok, Durnik.",
+    "places": "River and valley names frequently include 'Syl-' or 'Sel-': Sylene, Selport. Mountain and highland names use 'Cal-': Caldon, Calmor. Coastal towns often end in '-haven' or '-port': Asterhaven, Marlowport. Village names often have -by or -wick: Bromby, Eastwick.",
+    "institutions": "Government bodies use 'Council of [function]' or 'Bureau of [domain]'; e.g., Council of Water Management, Bureau of Cultural Heritage. Universities are named after cities or regions: University of Asterhaven, Caldon Institute of Technology. Political parties use adjectives like 'Unity', 'Reform', 'Caldon Front'.",
+    "sources": "Names are drawn from modified Germanic and Celtic roots, avoiding any real-world equivalents."
+  },
+  "historical_tensions": [
+    "Caldon autonomy and linguistic preservation vs. Asterian national unity",
+    "Urban-rural divide between the Sylene Valley and the Southern Marches",
+    "Dispute over water rights along the upper Sylene River between Western Uplands and Sylene Valley",
+    "Resentment of Eastern Coast's economic dominance by other regions"
+  ],
+  "major_institutions": [
+    "Asterian Federal Parliament",
+    "Supreme Court of Asteria",
+    "Bureau of Water Management",
+    "University of Asterhaven",
+    "Caldon Cultural Council",
+    "Asterian Central Bank",
+    "National Archives of Asteria",
+    "Sylene Valley Agricultural Board"
+  ],
+  "irregularities": [
+    "The old capital was called Althar City until 1874, then renamed Asterhaven after the monarchy was overthrown; many maps still show the old name in parentheses.",
+    "Failed land reform of 1928 (the 'Sylene Decree') attempted to redistribute large estates but collapsed due to poor enforcement, leaving many tenant farmers in worse conditions.",
+    "The Caldon Autonomous District was established in 1953 but its borders remain disputed; a 1963 referendum was boycotted by half the Caldon population.",
+    "Port Selene was originally a separate city-state until it was absorbed by force in 1809; independence movements still exist on the fringes.",
+    "The official national anthem, 'Asteria Rising', has two versions – an original from 1848 and a rewritten version from 1934; both are used on different occasions."
+  ],
+  "real_world_avoidance_rules": [
+    "No references to any real-world country, city, person, language, or historical event.",
+    "All geographic features must be fictional; no parallels to Earth's rivers, mountains, or seas.",
+    "Year ranges must stay within 1700–1995, but no specific dates that match real-world events.",
+    "Cultural elements must not mimic real-world nations or ethnic groups directly; any similarities are coincidental.",
+    "Avoid using names that are identical to real-world political parties, institutions, or currencies."
+  ]
+}

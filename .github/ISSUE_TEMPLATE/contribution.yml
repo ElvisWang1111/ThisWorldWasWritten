@@ -1,0 +1,30 @@
+name: Advance the world
+description: Open an issue to push the civilization's history forward one tick. A directive is optional.
+title: "[contribution] "
+labels: ["contribution"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Opening this issue advances the fictional world's history forward by one
+        tick (a fixed number of years). The AI develops open tensions, produces
+        new events, people and institutions, historicizes contradictions, and
+        rebuilds the wiki. Everything stays fully fictional.
+  - type: textarea
+    id: submission
+    attributes:
+      label: Directive (optional)
+      description: Leave blank to let the world evolve on its own, or steer it.
+      placeholder: |
+        Optional. e.g. "A drought in the Sylene Valley triggers mass migration
+        and a clash over water rights." Leave empty for autonomous evolution.
+    validations:
+      required: false
+  - type: input
+    id: years
+    attributes:
+      label: Years to advance (optional)
+      description: Defaults to the configured years_per_tick if left blank.
+      placeholder: "25"
+    validations:
+      required: false

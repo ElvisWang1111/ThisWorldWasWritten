@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Timeline — {{ world_name }} Encyclopedia{% endblock %}
+
+{% block content %}
+<article class="listing">
+  <h1>Historical timeline</h1>
+  <p class="lead">Events in {{ world_name }}, ordered chronologically.</p>
+  <ul class="timeline">
+    {% for e in events %}
+    <li>
+      <span class="tl-date">{{ e.start_date or "—" }}</span>
+      <span class="tl-name">
+        {% if e.slug %}<a href="{{ rel }}wiki/{{ e.slug }}.html">{{ e.name }}</a>{% else %}{{ e.name }}{% endif %}
+      </span>
+      <span class="tl-type">{{ e.event_type | replace("_"," ") }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</article>
+{% endblock %}

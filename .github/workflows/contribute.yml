@@ -1,0 +1,114 @@
+name: AI contribution
+
+# When someone opens an issue labelled "contribution" (via the issue form), the
+# AI expands the fictional world from their submission, commits the new world
+# data, rebuilds the static wiki, deploys it to Pages, then comments + closes.
+# Also runnable manually with a typed submission.
+
+on:
+  issues:
+    types: [opened, labeled, reopened]
+  workflow_dispatch:
+    inputs:
+      submission:
+        description: "Directive (optional; blank = autonomous evolution)"
+        required: false
+      years:
+        description: "Years to advance (optional)"
+        required: false
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: world-mutation
+  cancel-in-progress: false
+
+jobs:
+  contribute:
+    # Run for a manual dispatch, or an issue that is either labelled
+    # "contribution" or whose title starts with "[contribution]" (the issue
+    # form always adds that prefix, so it works even if the label is missing).
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' &&
+       (contains(github.event.issue.labels.*.name, 'contribution') ||
+        startsWith(github.event.issue.title, '[contribution]')))
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Extract directive and years
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          INPUT_SUB: ${{ github.event.inputs.submission }}
+          INPUT_YEARS: ${{ github.event.inputs.years }}
+        run: python .github/scripts/extract_submission.py
+
+      - name: Advance the world's history
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          YEARS="$(cat years.txt)"
+          if [ -n "$YEARS" ]; then
+            python scripts/evolve.py --file submission.txt --years "$YEARS"
+          else
+            python scripts/evolve.py --file submission.txt
+          fi
+
+      - name: Commit world + site changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ site_output/ || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            title="${{ github.event.issue.title }}"
+            git commit -m "Evolve world: ${title:-manual dispatch}"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site_output
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Comment on the issue
+        if: github.event_name == 'issues'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = "${{ steps.deploy.outputs.page_url }}";
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `The world's history has advanced and the wiki has been rebuilt.\n\nView it here: ${url}`,
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: "closed",
+            });

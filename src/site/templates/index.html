@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}{{ world_name }} Encyclopedia — Home{% endblock %}
+
+{% block content %}
+<article class="home">
+  <h1>{{ world_name }} Encyclopedia</h1>
+  <p class="lead">{{ intro }}</p>
+
+  <div class="home-grid">
+    <section class="card">
+      <h2>Browse</h2>
+      <ul>
+        <li><a href="{{ rel }}all-pages.html">All {{ page_count }} pages</a></li>
+        <li><a href="{{ rel }}categories.html">Categories</a></li>
+        <li><a href="{{ rel }}timeline.html">Historical timeline</a></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Main categories</h2>
+      <ul>
+        {% for c in main_categories %}
+        <li><a href="{{ rel }}category/{{ c.slug }}.html">{{ c.name }} ({{ c.count }})</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Random articles</h2>
+      <ul>
+        {% for p in random_pages %}
+        <li><a href="{{ rel }}wiki/{{ p.slug }}.html">{{ p.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Recently generated</h2>
+      <ul>
+        {% for p in recent_pages %}
+        <li><a href="{{ rel }}wiki/{{ p.slug }}.html">{{ p.title }}</a> <span class="muted">{{ p.page_type | replace("_"," ") }}</span></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+</article>
+{% endblock %}

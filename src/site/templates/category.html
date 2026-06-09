@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ heading }} — {{ world_name }} Encyclopedia{% endblock %}
+
+{% block content %}
+<article class="listing">
+  <h1>{{ heading }}</h1>
+  {% if description %}<p class="lead">{{ description }}</p>{% endif %}
+
+  {% if groups %}
+    {% for group in groups %}
+    <h2>{{ group.name }}</h2>
+    <ul class="page-list">
+      {% for p in group.pages %}
+      <li><a href="{{ rel }}wiki/{{ p.slug }}.html">{{ p.title }}</a>
+          <span class="muted">{{ p.page_type | replace("_"," ") }}</span></li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  {% else %}
+    <ul class="page-list">
+      {% for p in pages %}
+      <li><a href="{{ rel }}wiki/{{ p.slug }}.html">{{ p.title }}</a>
+          <span class="muted">{{ p.page_type | replace("_"," ") }}</span></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>
+{% endblock %}
