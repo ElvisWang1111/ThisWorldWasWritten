@@ -61,7 +61,7 @@ site:
   # Your GitHub repo URL (e.g. https://github.com/you/fake-wiki). When set, the
   # Contribute page shows a web "Submit a contribution" button that opens the
   # issue form; the contribute workflow then expands the world automatically.
-  repo_url: "https://github.com/elviswang1111/fake_wiki"
+  repo_url: "https://github.com/ElvisWang1111/ThisWorldWasWritten"
 
 paths:
   world_dir: data/world
