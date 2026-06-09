@@ -2,7 +2,7 @@
 
 Produces site_output/ with a home page, one article per page, an all-pages
 index, category pages, a timeline, a client-side title search index, and a
-fictional-world disclaimer on every page.
+banner framing the site as a self-evolving AI civilization archive on every page.
 """
 
 from __future__ import annotations
@@ -209,7 +209,9 @@ def build_site(cfg: Dict[str, Any]) -> Path:
     random_pages = rng.sample(pages, min(6, len(pages)))
     recent_pages = list(reversed(pages))[:8]
     intro = bible.get("main_country", {}).get("short_history") or (
-        f"A synthetic, fully fictional encyclopedia of {world_name}."
+        f"{world_name} is a self-evolving AI civilization. This encyclopedia is "
+        f"the visible surface of its history, continuously written and rewritten "
+        f"by AI as the world advances."
     )
     (out / "index.html").write_text(
         index_tpl.render(

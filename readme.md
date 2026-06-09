@@ -1,16 +1,20 @@
-# Synthetic Wiki World
+# This World Was Written
 
 ## 1. Project Motivation
 
-This project aims to construct a fully synthetic but internally coherent fictional knowledge world, and render it into a Wikipedia-style wiki.
+This project is **not** a fake-wiki generator, and it is **not** an experiment in producing a batch of fictional articles. It is an attempt to build a **self-evolving archive of an AI civilization**.
 
-The goal is not to generate random fake articles. The goal is to build a **closed fictional world** with its own entities, history, geography, institutions, events, conflicts, cultural details, and citation structure. The wiki should feel like a real knowledge ecosystem: articles should refer to one another, facts should remain consistent across pages, and the world should gradually become more realistic through human feedback.
+The system first generates a fully fictional but internally coherent worldview — nations, cities, people, institutions, events, wars, religions, political systems, archives, and historical controversies — and renders that world as a Wikipedia-style encyclopedia. But the encyclopedia is not static. It is the **visible surface of a civilization in motion**: the AI continuously advances the world's history, manufacturing new events, conflicts, institutions, and myths over time.
 
-At the current stage, this project is **not yet a benchmark**. We first want to build the synthetic world itself and its corresponding wiki infrastructure. Later, this world may be used for tasks such as retrieval, reasoning, citation, memory update, multi-hop QA, and testing whether language models import real-world knowledge into a fictional world.
+The crucial design choice is how the system handles contradiction. When the AI discovers an inconsistency, it does **not** simply correct the error. Instead it **historicizes, archives, and mythologizes** the contradiction — turning it into a new article, a scholarly dispute, a conspiracy, an institution, or a historical rupture. Contradiction becomes fuel for further evolution rather than something to be patched away.
+
+The research question this is built to observe:
+
+> If an AI is left to continuously write, repair, and forge the history of a civilization, what kind of civilizational imagination does it converge on? Does it spontaneously reinvent nations, bureaucracy, archives, religion, war, legitimacy crises, and historical revision?
 
 The key idea is:
 
-> We do not want an LLM to hallucinate isolated fake articles. We want to generate a complete fictional world, maintain its hidden structure, and render that structure into a coherent wiki.
+> Do not treat this as "generate some fake articles." Treat it as a **civilization-evolution engine**. The wiki pages are the civilization's narration of its own history. Every user contribution and every autonomous AI evolution step changes the underlying world state and leaves a browsable, traceable trail across the encyclopedia.
 
 ## 2. Core Design Principle
 
@@ -874,12 +878,12 @@ The home page should include:
 
 ## 18. Safety and Disclosure
 
-The generated wiki must clearly disclose that it is fictional.
+Even though the wiki is framed as a living civilization rather than a "fake wiki", every page must still make clear that the world is AI-generated and not a record of reality.
 
-Every site page should include a disclaimer such as:
+Every site page should include a banner such as:
 
 ```text
-This is a synthetic fictional wiki generated for research and prototyping purposes. All people, places, institutions, events, and sources are fictional unless explicitly marked otherwise.
+This is the visible surface of a self-evolving AI civilization. Its nations, people, institutions, wars, religions and archives are entirely AI-generated and continuously rewritten as the civilization advances its own history. Every page is this world telling its own story — not a record of the real one.
 ```
 
 The system should avoid generating content that imitates real people, real countries, real companies, real universities, or real historical events too closely.
