@@ -1,11 +1,8 @@
 {
-  "current_year": 2055,
+  "current_year": 2080,
   "years_per_tick": 25,
-  "tick": 4,
+  "tick": 5,
   "open_tensions": [
-    "The guilds, particularly the Royal Guild of Miners and the Thornwood Lumber Commission, resist environmental regulations imposed after the Serpent River sludge spill, creating a rift between traditional economic interests and the new Silvershield Environmental Commission.",
-    "The failure of the Grand Convention of 1978 leaves the Second Compact legally intact but politically contested, especially regarding the reinstated regional governors and the balance of power between the Hereditary Council and the Elected Chamber.",
-    "The shift to a floating currency after the Astrian Crown Crisis has created volatility in trade; agricultural exporters in the Windward Plains demand a return to a gold peg, while manufacturers in Silvershield City benefit from the weaker Crown.",
     "Environmental enforcement under the Clean Waters Act has led to illegal dumping in remote areas of the Thornwood, straining the capacity of the Silvershield Environmental Commission and triggering resentments among small mining cooperatives.",
     "The Thornwood Land Rights Committee, representing small mining cooperatives and freeholders, is increasingly in conflict with both the Thornwood Lumber Commission and the Royal Guild of Miners over mineral and timber rights. This dispute threatens to escalate into armed confrontations as the committee demands formal recognition of communal land titles.",
     "The Asteria First Movement, having won seats in parliament in 2028, is shifting from extra-parliamentary protest to legislative obstruction, calling for a referendum to repeal the Fourth Compact. Its growing influence in the Eastern Reaches alarms the central government and reignites separatist rhetoric.",
@@ -13,6 +10,10 @@
     "The expansion of digital commerce and the rise of the Digital Guild of Asteria has created a rift between traditional guild-controlled industries and the new tech sector, particularly in Silvershield City and Havenport, leading to calls for reform of guild licensing laws.",
     "The Eastern Reaches Sovereignty Party's call for a referendum on secession has gained traction after the Serpent River Crisis, alarming the central government and reigniting separatist tensions.",
     "The militarization of resource disputes in the Thornwood has led to the formation of private armed groups by both the Thornwood Land Rights Committee and mining companies, raising fears of civil conflict.",
-    "The Silvershield Environmental Enforcement Corps, though well-funded, is perceived as biased against small cooperatives in the Eastern Reaches, undermining its legitimacy and leading to sporadic acts of sabotage against enforcement outposts."
+    "The Silvershield Environmental Enforcement Corps, though well-funded, is perceived as biased against small cooperatives in the Eastern Reaches, undermining its legitimacy and leading to sporadic acts of sabotage against enforcement outposts.",
+    "The rapid growth of the tech sector in Silvershield City has created a new urban-rural divide, with the Windward Plains and Thornwood feeling left behind, fueling support for the Asteria First Movement and separatist parties.",
+    "The Digital Trade Commission's oversight of the Digital Guild of Asteria has sparked a conflict over data privacy and surveillance, pitting the Guild against civil liberties advocates, with the Constitutional Court expected to rule on a major case in 2081.",
+    "The Thornwood Land Tribunal's slow and contested decisions have led to sporadic sabotage of mining equipment, while the Thornwood Militia, though officially disbanded, continues to operate in the shadows, raising fears of renewed armed conflict.",
+    "The Currency Stability Act of 2070 has stabilized trade but created a new faction within the Astrian National Bank that advocates for a full gold standard, splitting the financial elite and threatening the coalition government."
   ]
 }
