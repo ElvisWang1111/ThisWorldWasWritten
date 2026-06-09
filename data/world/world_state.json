@@ -1,17 +1,18 @@
 {
-  "current_year": 2030,
+  "current_year": 2055,
   "years_per_tick": 25,
-  "tick": 3,
+  "tick": 4,
   "open_tensions": [
-    "The Eastern Reaches Autonomy League's demands for a regional parliament and control over mineral rights remain unfulfilled after the walkout from the Grand Convention, fueling separatist rhetoric.",
     "The guilds, particularly the Royal Guild of Miners and the Thornwood Lumber Commission, resist environmental regulations imposed after the Serpent River sludge spill, creating a rift between traditional economic interests and the new Silvershield Environmental Commission.",
     "The failure of the Grand Convention of 1978 leaves the Second Compact legally intact but politically contested, especially regarding the reinstated regional governors and the balance of power between the Hereditary Council and the Elected Chamber.",
-    "The implementation of the Third Compact faces opposition from the Hereditary Council, whose members reject the reduction of their veto powers, and from the Asteria First Movement, which views regional devolution as a threat to national unity.",
     "The shift to a floating currency after the Astrian Crown Crisis has created volatility in trade; agricultural exporters in the Windward Plains demand a return to a gold peg, while manufacturers in Silvershield City benefit from the weaker Crown.",
     "Environmental enforcement under the Clean Waters Act has led to illegal dumping in remote areas of the Thornwood, straining the capacity of the Silvershield Environmental Commission and triggering resentments among small mining cooperatives.",
-    "The Hereditary Council, having lost its absolute veto in the Fourth Compact, now fights to preserve its remaining privileges, including the ability to block constitutional amendments and its role in appointing Constitutional Court justices. The progressive coalition government elected in 2028 has made abolition of the Hereditary Council a central goal, leading to a constitutional showdown.",
     "The Thornwood Land Rights Committee, representing small mining cooperatives and freeholders, is increasingly in conflict with both the Thornwood Lumber Commission and the Royal Guild of Miners over mineral and timber rights. This dispute threatens to escalate into armed confrontations as the committee demands formal recognition of communal land titles.",
     "The Asteria First Movement, having won seats in parliament in 2028, is shifting from extra-parliamentary protest to legislative obstruction, calling for a referendum to repeal the Fourth Compact. Its growing influence in the Eastern Reaches alarms the central government and reignites separatist rhetoric.",
-    "A new environmental tension: the accelerated mining in the Eastern Reaches after the devolution of mineral rights has led to rapid deforestation and water pollution in the Serpent River basin, straining the capacity of the Silvershield Environmental Commission and drawing protests from downriver communities in the Windward Plains."
+    "A new environmental tension: the accelerated mining in the Eastern Reaches after the devolution of mineral rights has led to rapid deforestation and water pollution in the Serpent River basin, straining the capacity of the Silvershield Environmental Commission and drawing protests from downriver communities in the Windward Plains.",
+    "The expansion of digital commerce and the rise of the Digital Guild of Asteria has created a rift between traditional guild-controlled industries and the new tech sector, particularly in Silvershield City and Havenport, leading to calls for reform of guild licensing laws.",
+    "The Eastern Reaches Sovereignty Party's call for a referendum on secession has gained traction after the Serpent River Crisis, alarming the central government and reigniting separatist tensions.",
+    "The militarization of resource disputes in the Thornwood has led to the formation of private armed groups by both the Thornwood Land Rights Committee and mining companies, raising fears of civil conflict.",
+    "The Silvershield Environmental Enforcement Corps, though well-funded, is perceived as biased against small cooperatives in the Eastern Reaches, undermining its legitimacy and leading to sporadic acts of sabotage against enforcement outposts."
   ]
 }

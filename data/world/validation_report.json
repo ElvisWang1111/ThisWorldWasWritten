@@ -4,10 +4,10 @@
     "warnings": 0,
     "total_findings": 16,
     "counts": {
-      "entities": 96,
-      "events": 36,
-      "relations": 6,
-      "sources": 45,
+      "entities": 104,
+      "events": 41,
+      "relations": 7,
+      "sources": 49,
       "pages": 0
     },
     "passed": false
