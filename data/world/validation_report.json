@@ -1,13 +1,13 @@
 {
   "summary": {
-    "errors": 15,
+    "errors": 16,
     "warnings": 0,
-    "total_findings": 15,
+    "total_findings": 16,
     "counts": {
-      "entities": 92,
-      "events": 30,
-      "relations": 5,
-      "sources": 42,
+      "entities": 96,
+      "events": 36,
+      "relations": 6,
+      "sources": 45,
       "pages": 0
     },
     "passed": false
@@ -146,6 +146,15 @@
       "ids": [
         "evt_000029",
         "ent_000058"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Alaric Thorwaldsen' participates in 'Havenport Banking Scandal' after death (2017 > 1995)",
+      "ids": [
+        "evt_000034",
+        "ent_000037"
       ]
     }
   ]

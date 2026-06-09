@@ -3,3 +3,4 @@
 {"relation_id": "rel_000003", "subject_id": "ent_000016", "predicate": "part_of", "object_id": "ent_000001", "start_date": null, "end_date": null, "confidence": 1.0, "source_ids": ["src_000024", "src_000035"], "version": 1}
 {"relation_id": "rel_000004", "subject_id": "ent_000080", "predicate": "leader_of", "object_id": "ent_000076", "start_date": "1967", "end_date": null, "confidence": 1.0, "source_ids": [], "version": 1}
 {"relation_id": "rel_000005", "subject_id": "ent_000077", "predicate": "founded", "object_id": "ent_000085", "start_date": "1987", "end_date": null, "confidence": 1.0, "source_ids": [], "version": 1}
+{"relation_id": "rel_000006", "subject_id": "ent_000038", "predicate": "member_of", "object_id": "ent_000090", "start_date": "2005", "end_date": null, "confidence": 1.0, "source_ids": [], "version": 1}
