@@ -43,7 +43,7 @@ def main() -> None:
 
     from synthetic_world.evolve import advance_world
     from synthetic_world.llm_client import LLMConfig, LLMClient
-    from synthetic_world.renderers import render_wiki_pages
+    from synthetic_world.renderers import render_event_pages, render_wiki_pages
     from synthetic_world.site_builder import build_site
     from synthetic_world.utils import load_config
     from synthetic_world.validators import validate_world
@@ -52,10 +52,12 @@ def main() -> None:
     llm = LLMClient(LLMConfig.from_dict(cfg.get("generation", {})))
 
     all_new_ids: list[str] = []
+    all_new_event_ids: list[str] = []
     for _ in range(max(1, args.ticks)):
         result = advance_world(cfg, llm, directive=directive, years=args.years)
         print(f"[evolve] {result['summary']}")
         all_new_ids.extend(result["new_entity_ids"])
+        all_new_event_ids.extend(result.get("new_event_ids", []))
         # A directive applies to the first tick only; later ticks are autonomous.
         directive = None
 
@@ -65,6 +67,8 @@ def main() -> None:
 
     if not args.no_render and all_new_ids:
         render_wiki_pages(cfg, llm, only_entity_ids=set(all_new_ids))
+    if not args.no_render and all_new_event_ids:
+        render_event_pages(cfg, llm, only_event_ids=set(all_new_event_ids))
 
     if not args.no_build:
         out = build_site(cfg)

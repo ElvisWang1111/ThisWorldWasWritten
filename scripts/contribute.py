@@ -47,7 +47,7 @@ def main() -> None:
 
     from synthetic_world.contribute import apply_contribution
     from synthetic_world.llm_client import LLMConfig, LLMClient
-    from synthetic_world.renderers import render_wiki_pages
+    from synthetic_world.renderers import render_event_pages, render_wiki_pages
     from synthetic_world.repair import repair_temporal
     from synthetic_world.site_builder import build_site
     from synthetic_world.utils import load_config
@@ -67,13 +67,19 @@ def main() -> None:
     s = report.to_dict()["summary"]
     print(f"[contribute] validation: {s['errors']} errors, {s['warnings']} warnings")
 
-    if not args.no_render and result["new_entity_ids"]:
+    if not args.no_render:
         if args.rerender_all:
             render_wiki_pages(cfg, llm)
+            render_event_pages(cfg, llm)
         else:
-            render_wiki_pages(
-                cfg, llm, only_entity_ids=set(result["new_entity_ids"])
-            )
+            if result["new_entity_ids"]:
+                render_wiki_pages(
+                    cfg, llm, only_entity_ids=set(result["new_entity_ids"])
+                )
+            if result.get("new_event_ids"):
+                render_event_pages(
+                    cfg, llm, only_event_ids=set(result["new_event_ids"])
+                )
 
     if not args.no_build:
         out = build_site(cfg)

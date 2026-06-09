@@ -2,105 +2,118 @@
   "world_name": "Asteria",
   "main_country": {
     "name": "Asteria",
-    "short_history": "Asteria emerged from fragmented princedoms in the mid-19th century after the Unification Convention of 1847. The country experienced a short-lived republic period (1921–1933) before stabilizing into a federal parliamentary system. Lingering tensions between the lowland Sylene Valley and the highland Caldon communities persist.",
-    "government_type": "Federal parliamentary republic with a ceremonial presidency"
+    "short_history": "Asteria emerged from the fragmentation of the Orelian Empire in 1722. The First Union (1722-1801) established a feudal constitutional monarchy. The Industrial Awakening (1820-1880) brought rapid urban growth but deepened regional disparities. A failed republican coup in 1856 led to the Second Compact, which centralized power but preserved the monarchy as a figurehead. The Great Border War (1912-1916) redrew the eastern frontier. Post-war reforms slowly expanded suffrage and weakened hereditary guild privileges.",
+    "government_type": "Constitutional monarchy with a bicameral parliament (Hereditary Council and Elected Chamber) and a Grand Chamberlain as head of government."
   },
-  "geography": "Asteria occupies a roughly rectangular area on the eastern side of the Varethian continent. The western border is defined by the Caldon Mountains, a rugged range reaching up to 2,800 m. The Sylene River flows eastward from the mountains, bisecting the country and emptying into the Vythian Sea along a marshy delta. To the north are rolling highlands with cool summers and heavy winter snowfall. The eastern coastline is a mix of sandy beaches and steep cliffs, with deep natural harbors at Asterhaven and Marlow. The south is a region of dry plains and scrublands known as the Southern Marches, with a Mediterranean climate. Central Asteria, the Sylene Valley, is fertile and densely populated.",
+  "geography": "Asteria occupies the central portion of the continent of Thanor. The Spine of Aethon, a mountain range running north-south, divides the country: to the west, the fertile Windward Plains and the Bay of Whispers; to the east, the arid Eastern Reaches and the Serpent River basin. The northern region is the Thornwood, a cold taiga with scattered mining settlements. The southern coast is a jagged archipelago known as the Shattered Isles, with mild winters and stormy summers. The central highlands contain Lake Silvershield, the largest freshwater lake in Thanor.",
   "regions": [
     {
-      "name": "Northern Highlands",
-      "character": "Cool, forested uplands with small mining settlements; strong Caldon cultural influence; sparse population; known for herding and timber."
+      "name": "Windward Plains",
+      "character": "Agricultural heartland, dominated by grain estates and horse-breeding. Strong local nobility, historically rebellious."
     },
     {
-      "name": "Sylene Valley",
-      "character": "Heartland of Asteria; intensive agriculture and major cities; political and economic core; mixed Asterian and Sylene Creole dialects."
+      "name": "Eastern Reaches",
+      "character": "Semi-arid plateau with sparse population, known for sheep herding and mineral extraction. Frequent border disputes with neighboring Cerethia."
     },
     {
-      "name": "Eastern Coast",
-      "character": "Maritime region with fishing, trade, and tourism; urban centers at Asterhaven and Port Selene; historically oriented toward overseas commerce."
+      "name": "Thornwood",
+      "character": "Northern taiga, heavily forested. Logging and iron mining. Sparse settlement, strong egalitarian traditions among lumber and mining guilds."
     },
     {
-      "name": "Southern Marches",
-      "character": "Arid plains and limestone hills; sheep farming and wine production; sparse population; historically a frontier zone with occasional border disputes with a neighboring country (unnamed)."
+      "name": "Bay of Whispers",
+      "character": "Western coastal region, major trading ports (Havenport, Marinersgate). Cosmopolitan, with a mix of languages and old merchant families."
     },
     {
-      "name": "Western Uplands",
-      "character": "Transition zone between the Caldon Mountains and the Sylene Valley; terraced farming; mix of Asterian and Caldon communities; site of the disputed Caldon Autonomous District."
+      "name": "Shattered Isles",
+      "character": "Archipelago of volcanic islands. Fishing, shipbuilding, and stubborn local autonomy. Known for a distinct dialect and isolationist leanings."
     }
   ],
   "languages": [
     {
-      "name": "Asterian",
-      "notes": "Official national language; West Germanic family; uses Latin script with diacritics (ä, ö); predominant in government and lowland areas."
+      "name": "Astrian",
+      "notes": "Official language, derived from Old Orelian. Used in government and education. Has northern and southern dialects that are barely mutually intelligible."
     },
     {
-      "name": "Caldon",
-      "notes": "Minority language in the Caldon Mountains and Northern Highlands; related to Asterian but with significant lexical and phonological differences; recognized as a regional language since 1953."
+      "name": "Thornic",
+      "notes": "Spoken in the Thornwood and parts of the Eastern Reaches. No official status, but taught in local schools. Uses a different script in informal contexts."
     },
     {
-      "name": "Sylene Creole",
-      "notes": "Trade pidgin based on Asterian and Caldon with some maritime lexicon; spoken in river ports and coastal markets; no standard orthography."
+      "name": "Archipelec",
+      "notes": "Creole of Astrian and old island tongues, spoken in the Shattered Isles. Contains many nautical loanwords. Stigmatized by mainlanders."
     }
   ],
   "historical_periods": [
     {
-      "name": "Pre-Unification Kingdoms",
-      "approx_years": "1700–1847",
-      "summary": "A patchwork of principalities, city-states, and Caldon mountain clans. The Sylene Valley was dominated by the Kingdom of Althar, while the coast fell under the influence of the Selene League."
+      "name": "Orelian Dominion",
+      "approx_years": "1580-1720",
+      "summary": "Asteria was a periphery province of the Orelian Empire, ruled by appointed governors. Rising taxation sparked local revolts."
     },
     {
-      "name": "Unified Asterian State",
-      "approx_years": "1847–1921",
-      "summary": "The Unification Convention created a centralized monarchy under the Althar dynasty. Infrastructure expanded, but Caldon autonomy eroded, leading to periodic uprisings."
+      "name": "First Union",
+      "approx_years": "1722-1801",
+      "summary": "Federation of five duchies under a weak monarch. Frequent civil wars over succession. Ended with the Treaty of Silvershield."
     },
     {
-      "name": "First Republic",
-      "approx_years": "1921–1933",
-      "summary": "A populist revolution overthrew the monarchy. The republic was plagued by factionalism and a failed land reform in 1928 that left rural areas in disarray. Collapsed after the 1933 economic crisis."
+      "name": "Industrial Awakening",
+      "approx_years": "1820-1880",
+      "summary": "Rapid urbanization and canal-building. Guilds became powerful economic players. Social unrest led to the 1856 coup attempt."
     },
     {
-      "name": "Federal Era",
-      "approx_years": "1934–1995",
-      "summary": "A new constitution established a federal parliamentary system with strong regional autonomy. Gradual economic recovery; cultural renaissance; ongoing debates over Caldon linguistic rights."
+      "name": "Second Compact",
+      "approx_years": "1858-1912",
+      "summary": "Centralized state under the Crown. Expansion of bureaucracy and standing army. Tensions with Cerethia culminated in war."
+    },
+    {
+      "name": "Post-War Restructuring",
+      "approx_years": "1917-1955",
+      "summary": "Redrawing of borders, slow democratization. Creation of the Elected Chamber. Continuing struggle between industrialists and traditional landowners."
+    },
+    {
+      "name": "Modernization Era",
+      "approx_years": "1955-1990",
+      "summary": "Economic boom and cultural liberalization. Sputtering decline of heavy industry. Rise of regionalist movements."
     }
   ],
-  "political_structure": "Asteria is a federal parliamentary republic. The head of state is a president elected by the Federal Assembly every six years (ceremonial role). The head of government is the Chancellor, elected by the lower house (Chamber of Deputies). The bicameral Federal Assembly comprises the Chamber of Deputies (250 seats, proportional representation) and the Council of Regions (75 members, appointed by regional legislatures). Regions have considerable autonomy over education, policing, and cultural affairs. Judicial power is vested in the Supreme Court and regional appellate courts.",
-  "economic_structure": "Mixed economy with significant state ownership in transport and energy. Agriculture dominates the Sylene Valley (wheat, barley, orchard fruits). Mining in the Caldon Mountains (iron, copper, marble). The Eastern Coast supports fishing, shipbuilding, and a growing tourism sector. The Southern Marches produce wine and wool. Asterhaven is a major port for regional trade. The Asterian Central Bank manages currency (Asterian Crown). Industrial manufacturing is concentrated in the cities of the Sylene Valley. Persistent economic disparity between the wealthy coastal/valley regions and the poorer highlands and marches.",
-  "cultural_traits": "Asterian society values civic duty, punctuality, and modesty. Religious affiliation is predominantly the Church of the Aster (a syncretic faith blending indigenous nature worship with a monotheistic deity), though secularism is widespread. Festivals celebrate the spring thaw (Sylene Festival) and the autumn harvest (Harvest Moon Fair). Caldon communities maintain distinct music (bagpipes, choral singing) and a tradition of mountain storytelling. Cuisine features hearty stews, rye bread, and freshwater fish. Etiquette emphasizes formal address in public settings.",
+  "political_structure": "Asteria is a constitutional monarchy. The monarch (the Grand Duke/Duchess) holds ceremonial powers. Real executive authority lies with the Grand Chamberlain, appointed by the monarch on the advice of the Elected Chamber. The legislature is bicameral: the Hereditary Council (seats held by noble families and guild heads) and the Elected Chamber (popularly elected every five years by limited male suffrage, expanded to universal in 1967). The judiciary is nominally independent but historically influenced by the Crown. Local governance is divided into 5 regions with appointed governors (revoked in 1923, reinstated in 1972, creating tensions).",
+  "economic_structure": "Mixed economy: agriculture (wheat, barley, wine) in the Windward Plains; mining (iron, copper, rare earths) in the Eastern Reaches and Thornwood; manufacturing concentrated in Havenport and Silvershield City; a declining textile sector in the north; a small but growing service and tech sector in the south. Guilds still control many trades through licensing. Banking centered on Havenport. Currency: the Astrian Crown (pegged to gold, but devalued in the 1930s). Smuggling is a major issue along the eastern border and through the Shattered Isles.",
+  "cultural_traits": "Strong tradition of guild-based apprenticeship and festivals (e.g. the Midsummer Forging, the Week of Guilds). Food: hearty stews, flatbread, fish from the coasts. Literature: epic poems about the First Union, recent revival of Orelian-era folktales. Music: fiddles and drums in the north, reed instruments in the south. Religion: worship of the Æther (a nebulous divine force) with local saints/heroes. Clan loyalty is important in the Thornwood and Isles. Social hierarchy is less rigid than a century ago, but old nobility still commands deference.",
   "naming_conventions": {
-    "people": "Given names often end in -a (female) or -en (male), e.g., Lira, Maren, Tarven. Surnames commonly have suffixes -ov, -ar, or -sen: Vasilov, Thalar, Morsen. Caldon surnames often end in -k or -t: Borok, Durnik.",
-    "places": "River and valley names frequently include 'Syl-' or 'Sel-': Sylene, Selport. Mountain and highland names use 'Cal-': Caldon, Calmor. Coastal towns often end in '-haven' or '-port': Asterhaven, Marlowport. Village names often have -by or -wick: Bromby, Eastwick.",
-    "institutions": "Government bodies use 'Council of [function]' or 'Bureau of [domain]'; e.g., Council of Water Management, Bureau of Cultural Heritage. Universities are named after cities or regions: University of Asterhaven, Caldon Institute of Technology. Political parties use adjectives like 'Unity', 'Reform', 'Caldon Front'.",
-    "sources": "Names are drawn from modified Germanic and Celtic roots, avoiding any real-world equivalents."
+    "people": "Given name + patronymic (male: -son, female: -dotter) or clan name for northerners. Southerners often use a family name derived from place. Examples: Alaric Thorwaldsen, Kaelina Marinsdotter, Erlan of Silvershield. Nobility use a territorial title like 'Lord of Havenport'.",
+    "places": "Suffixes: -port (coastal town), -burg (fortified town), -feld (plain), -mere (lake), -hold (castle), -reach (region). Prefixes: Siliver-, Thorn-, Wind-, East-. Examples: Silvershield, Havenport, Thornburg, Windfield.",
+    "institutions": "Often named after their founder or location, plus a descriptor: Silvershield University, the Royal Guild of Miners, the Thornwood Lumber Commission. Acronyms are uncommon except for modern agencies.",
+    "sources": "Norse-derived given names, Scottish/Germanic place-name patterns, English-style institution names."
   },
   "historical_tensions": [
-    "Caldon autonomy and linguistic preservation vs. Asterian national unity",
-    "Urban-rural divide between the Sylene Valley and the Southern Marches",
-    "Dispute over water rights along the upper Sylene River between Western Uplands and Sylene Valley",
-    "Resentment of Eastern Coast's economic dominance by other regions"
+    "Central authority vs. regional autonomy: the Windward nobles resent taxation by Havenport bureaucrats.",
+    "Guild privileges vs. free trade: urban guilds block competition, causing friction with rural entrepreneurs.",
+    "Religious division: the Æther orthodoxy from the south conflicts with the more animist traditions of the Thornwood and Isles.",
+    "Border dispute with Cerethia: the Demeter Valley, claimed by both states since 1916, remains a militarized zone."
   ],
   "major_institutions": [
-    "Asterian Federal Parliament",
-    "Supreme Court of Asteria",
-    "Bureau of Water Management",
-    "University of Asterhaven",
-    "Caldon Cultural Council",
-    "Asterian Central Bank",
-    "National Archives of Asteria",
-    "Sylene Valley Agricultural Board"
+    "The Hereditary Council (upper house of parliament)",
+    "The Royal Guild of Miners (regulates all mining in the Eastern Reaches)",
+    "Silvershield University (oldest university, founded 1789)",
+    "The Thornwood Lumber Commission (semi-public corporation, notorious for corruption)",
+    "The Astrian National Bank (central bank, created 1851)",
+    "The Cerethian Front Institute (think tank on border policy)",
+    "The Order of the Silver Key (secretive society of archivists and historians)"
   ],
   "irregularities": [
-    "The old capital was called Althar City until 1874, then renamed Asterhaven after the monarchy was overthrown; many maps still show the old name in parentheses.",
-    "Failed land reform of 1928 (the 'Sylene Decree') attempted to redistribute large estates but collapsed due to poor enforcement, leaving many tenant farmers in worse conditions.",
-    "The Caldon Autonomous District was established in 1953 but its borders remain disputed; a 1963 referendum was boycotted by half the Caldon population.",
-    "Port Selene was originally a separate city-state until it was absorbed by force in 1809; independence movements still exist on the fringes.",
-    "The official national anthem, 'Asteria Rising', has two versions – an original from 1848 and a rewritten version from 1934; both are used on different occasions."
+    "Oldhaven (city) was renamed Newhaven in 1823 after a flood, then officially reverted to Oldhaven in 1931 amid local protests.",
+    "The 1856 Republican Coup failed because the rebel leader's horse stumbled on the parliament steps – the event is mockingly called 'Stumble Day'.",
+    "The Land Reform Act of 1892 was repealed after three years due to violent resistance by nobles; only 12% of land was redistributed.",
+    "The eastern border with Cerethia is marked by a river that changed course in 1904, leaving pockets of disputed territory.",
+    "The Thornwood region uses a different calendar (based on local saints) for religious festivals, causing bureaucratic confusion.",
+    "The national anthem has three verses, but the third verse is officially banned because it glorifies the failed republican coup."
   ],
   "real_world_avoidance_rules": [
-    "No references to any real-world country, city, person, language, or historical event.",
-    "All geographic features must be fictional; no parallels to Earth's rivers, mountains, or seas.",
-    "Year ranges must stay within 1700–1995, but no specific dates that match real-world events.",
-    "Cultural elements must not mimic real-world nations or ethnic groups directly; any similarities are coincidental.",
-    "Avoid using names that are identical to real-world political parties, institutions, or currencies."
+    "No reference to any real country, city, river, mountain, or other geographic entity.",
+    "No real historical figures, events, or movements (e.g., no French Revolution, no World Wars, no Cold War).",
+    "No real languages, alphabets, or naming systems from Earth. All names must be fabricated.",
+    "No real institutions, companies, or organizations. Use fictional ones.",
+    "No real religions or belief systems. Fictional only.",
+    "Ensure all dates and years are within 1700-1995 and do not align with real-world events in a recognizable way.",
+    "Avoid any fictional world that mirrors a real region too closely (e.g., no 'Fantasy Britain' or 'Fantasy Japan').",
+    "Do not use any words or concepts that are trademarked or strongly associated with existing fiction (e.g., 'Mordor', 'Narnia')."
   ]
 }

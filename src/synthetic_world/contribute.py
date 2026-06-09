@@ -264,6 +264,7 @@ def merge_additions(
     result = {
         "summary": data.get("summary", ""),
         "new_entity_ids": [e["entity_id"] for e in new_entities],
+        "new_event_ids": [e["event_id"] for e in new_events],
         "counts": {
             "entities": len(new_entities),
             "events": len(new_events),

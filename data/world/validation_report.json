@@ -1,16 +1,143 @@
 {
   "summary": {
-    "errors": 0,
+    "errors": 14,
     "warnings": 0,
-    "total_findings": 0,
+    "total_findings": 14,
     "counts": {
-      "entities": 87,
-      "events": 25,
-      "relations": 39,
-      "sources": 40,
-      "pages": 0
+      "entities": 75,
+      "events": 21,
+      "relations": 3,
+      "sources": 35,
+      "pages": 71
     },
-    "passed": true
+    "passed": false
   },
-  "findings": []
+  "findings": [
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Orin Silvershield' participates in 'Proclamation of the First Union' before existing (1722-05-01 < 1930)",
+      "ids": [
+        "evt_000001",
+        "ent_000048"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Alaric Thorwaldsen' participates in 'Proclamation of the First Union' before existing (1722-05-01 < 1929)",
+      "ids": [
+        "evt_000001",
+        "ent_000037"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Orin Silvershield' participates in 'Founding of Silvershield University' before existing (1789-10-15 < 1930)",
+      "ids": [
+        "evt_000002",
+        "ent_000048"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Lyra Silvershield-Mere' participates in 'Treaty of Silvershield' before existing (1801-03-21 < 1865)",
+      "ids": [
+        "evt_000003",
+        "ent_000042"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Fenris Hearth-Knutson' participates in 'Introduction of the Astrian Steam-Loom' before existing (1825-07-12 < 1827)",
+      "ids": [
+        "evt_000005",
+        "ent_000043"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Isolde of Havenport' participates in 'Founding of the Astrian National Bank' before existing (1851-09-01 < 1898)",
+      "ids": [
+        "evt_000006",
+        "ent_000044"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Leif Coppersson' participates in 'Discovery of the Silvershield Electro-Plating Process' after death (1885-03-22 > 1872)",
+      "ids": [
+        "evt_000009",
+        "ent_000059"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Aldric Feldwinson' participates in 'Land Reform Act of 1892' after death (1892-06-01 > 1880)",
+      "ids": [
+        "evt_000010",
+        "ent_000045"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Lord Arvid of the Bay of Whispers' participates in 'Repeal of the Land Reform Act' after death (1895-11-14 > 1883)",
+      "ids": [
+        "evt_000011",
+        "ent_000058"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Gunnar Ironwood' participates in 'Battle of Demeter Valley' after death (1912-09-11 > 1903)",
+      "ids": [
+        "evt_000013",
+        "ent_000054"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Gunnar Ironwood' participates in 'Battle of Eastrun' after death (1914-07-21 > 1903)",
+      "ids": [
+        "evt_000014",
+        "ent_000054"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Thurston Thornwood' participates in 'Battle of Eastrun' after death (1914-07-21 > 1890)",
+      "ids": [
+        "evt_000014",
+        "ent_000051"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Dorian Havenport' participates in 'Treaty of Serpent River' after death (1916-03-03 > 1905)",
+      "ids": [
+        "evt_000015",
+        "ent_000050"
+      ]
+    },
+    {
+      "severity": "error",
+      "check": "temporal",
+      "message": "'Fenris Hearth-Knutson' participates in 'Abolition of Regional Governors' after death (1923-01-01 > 1905)",
+      "ids": [
+        "evt_000017",
+        "ent_000043"
+      ]
+    }
+  ]
 }

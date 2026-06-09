@@ -41,7 +41,7 @@ def main() -> None:
         generate_world_bible,
     )
     from synthetic_world.llm_client import LLMClient, LLMConfig
-    from synthetic_world.renderers import render_wiki_pages
+    from synthetic_world.renderers import render_event_pages, render_wiki_pages
     from synthetic_world.site_builder import build_site
     from synthetic_world.utils import load_config
     from synthetic_world.validators import validate_world
@@ -76,6 +76,7 @@ def main() -> None:
 
     if in_range(7):
         render_wiki_pages(cfg, llm)
+        render_event_pages(cfg, llm)
 
     if in_range(8):
         report = validate_world(cfg, include_wiki=True)

@@ -199,6 +199,7 @@ class WikiPage(BaseModel):
     page_id: str
     title: str
     entity_id: Optional[str] = None
+    event_id: Optional[str] = None
     page_type: str
     summary: str = ""
     sections: List[PageSection] = Field(default_factory=list)

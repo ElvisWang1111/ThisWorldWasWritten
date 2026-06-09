@@ -54,8 +54,35 @@ _SECTION_GUIDANCE: Dict[str, str] = {
     "artwork": "Description; Background and creation; Provenance; Reception",
     "political_crisis": "Background; Course of events; Key participants; "
                         "Resolution; Aftermath",
+    "war": "Background and causes; Course of the war; Key battles and participants; "
+           "Outcome; Aftermath and legacy",
+    "battle": "Background; Forces and commanders; Course of the battle; "
+              "Outcome; Significance",
+    "reform": "Background; Provisions; Implementation; Effects; Reception and legacy",
+    "election": "Background; Candidates and parties; Campaign; Results; Aftermath",
+    "economic_crisis": "Background; Onset and causes; Course; Responses; "
+                       "Consequences and legacy",
+    "scientific_discovery": "Background; The discovery; Methods; Reception; Impact",
+    "cultural_movement": "Origins; Ideas and aesthetics; Key figures; "
+                         "Spread and influence; Legacy",
+    "institution_founding": "Background; Founding; Early organization; "
+                            "Role and activities; Legacy",
+    "natural_disaster": "Background; The event; Immediate impact; Response; Aftermath",
+    "migration": "Background and causes; Course; Destinations and settlement; "
+                 "Impact; Legacy",
+    "assassination": "Background; The assassination; Perpetrators and motives; "
+                     "Investigation; Aftermath and legacy",
+    "protest": "Background and grievances; Course of events; Key participants; "
+               "Response; Outcome and legacy",
+    "court_case": "Background; Parties and charges; Proceedings; Ruling; "
+                  "Significance and legacy",
+    "alliance": "Background; Negotiation; Terms; Members; Aftermath and legacy",
 }
 _DEFAULT_GUIDANCE = "History; Overview; Significance; Legacy"
+_DEFAULT_EVENT_GUIDANCE = (
+    "Background and causes; Course of events; Key participants; Outcome; "
+    "Aftermath and legacy"
+)
 
 
 def _world_context(bible: Dict[str, Any]) -> str:
@@ -137,6 +164,51 @@ def _facts_for_entity(
                for f in s.get("supports", []))
     ]
     return {"relations": rel_slice, "events": evt_slice, "sources": src_slice}
+
+
+def _facts_for_event(
+    event: Dict[str, Any],
+    sources: List[Dict[str, Any]],
+    ent_by_id: Dict[str, Dict[str, Any]],
+    evt_by_id: Dict[str, Dict[str, Any]],
+) -> Dict[str, Any]:
+    """Assemble the hidden-world slice an event page is grounded in:
+    its participants, locations, causally-linked events, and supporting sources.
+    """
+    eid = event["event_id"]
+
+    def _names(ids: List[str], lookup: Dict[str, Dict[str, Any]]) -> List[str]:
+        return [lookup[i]["name"] for i in (ids or []) if i in lookup]
+
+    participants = _names(event.get("participant_ids", []), ent_by_id)
+    locations = _names(event.get("location_ids", []), ent_by_id)
+    causes = [
+        {
+            "name": evt_by_id[i]["name"],
+            "event_type": evt_by_id[i].get("event_type"),
+            "start_date": evt_by_id[i].get("start_date"),
+        }
+        for i in (event.get("cause_event_ids") or [])
+        if i in evt_by_id
+    ]
+    src_slice = [
+        {
+            "source_id": s["source_id"],
+            "title": s["title"],
+            "source_type": s["source_type"],
+            "author": s.get("author"),
+            "publication_year": s.get("publication_year"),
+            "reliability": s.get("reliability"),
+        }
+        for s in sources
+        if eid in s.get("supports", [])
+    ]
+    return {
+        "participants": participants,
+        "locations": locations,
+        "caused_by": causes,
+        "sources": src_slice,
+    }
 
 
 def _render_one_page(
@@ -323,9 +395,17 @@ def render_wiki_pages(
             pages.append(rendered[eid])
             seen.add(eid)
 
+    _write_pages_and_side_tables(paths, pages)
+    print(f"[stage7] pages -> {paths['pages']} ({len(pages)})")
+    return paths["pages"]
+
+
+def _write_pages_and_side_tables(
+    paths: Dict[str, Path], pages: List[Dict[str, Any]]
+) -> None:
+    """Persist pages.jsonl plus the links/categories/references side tables."""
     write_jsonl(paths["pages"], pages)
 
-    # Side tables for convenient querying / validation.
     links = [
         {"from_page": p["page_id"], "to_page": tp}
         for p in pages
@@ -349,5 +429,175 @@ def render_wiki_pages(
     ]
     write_jsonl(paths["references"], refs)
 
-    print(f"[stage7] pages -> {paths['pages']} ({len(pages)})")
+
+def _render_one_event_page(
+    event: Dict[str, Any],
+    page_id: str,
+    *,
+    llm: LLMClient,
+    sources: List[Dict[str, Any]],
+    ent_by_id: Dict[str, Dict[str, Any]],
+    evt_by_id: Dict[str, Dict[str, Any]],
+    world_context: str,
+    title_to_page: Dict[str, str],
+    candidate_titles: List[str],
+    src_ids: set,
+    lengths: Dict[str, int],
+) -> Dict[str, Any] | None:
+    """Render a single historical event into a WikiPage dict (or None on failure)."""
+    facts = _facts_for_event(event, sources, ent_by_id, evt_by_id)
+    candidates = [t for t in candidate_titles if t != event["name"]][:40]
+    page_type = event["event_type"]
+    prompt = load_prompt("render_event_page.md").format(
+        event_json=json.dumps(event, ensure_ascii=False),
+        world_context=world_context,
+        facts_json=json.dumps(facts, ensure_ascii=False),
+        link_candidates=", ".join(candidates) or "(none)",
+        page_type=page_type,
+        section_guidance=_SECTION_GUIDANCE.get(page_type, _DEFAULT_EVENT_GUIDANCE),
+        min_sections=lengths["min_sections"],
+        max_sections=lengths["max_sections"],
+        min_paras=lengths["min_paras"],
+        max_paras=lengths["max_paras"],
+    )
+    try:
+        data = llm.complete_json(SYSTEM, prompt, max_tokens=lengths["max_tokens"])
+    except Exception as exc:  # noqa: BLE001 - skip a page rather than abort
+        print(f"[render] WARN: failed to render event '{event['name']}': {exc}")
+        return None
+
+    sections = [
+        schemas.PageSection(
+            heading=s.get("heading", "Section"),
+            content=s.get("content", ""),
+        ).model_dump()
+        for s in data.get("sections", [])
+    ]
+
+    all_text = " ".join(s["content"] for s in sections) + " " + data.get("summary", "")
+    linked_titles = set(_LINK_RE.findall(all_text)) | set(
+        data.get("internal_link_titles", [])
+    )
+    internal_links: List[str] = []
+    for t in linked_titles:
+        pid = title_to_page.get(t.strip().lower())
+        if pid and pid != page_id and pid not in internal_links:
+            internal_links.append(pid)
+
+    cited = set(_CITE_RE.findall(all_text)) | set(data.get("reference_ids", []))
+    reference_ids = [c for c in cited if c in src_ids]
+
+    page = schemas.WikiPage(
+        page_id=page_id,
+        title=event["name"],
+        event_id=event["event_id"],
+        page_type=event["event_type"],
+        summary=data.get("summary", ""),
+        sections=sections,
+        infobox=data.get("infobox", {}) or {},
+        internal_links=internal_links,
+        categories=data.get("categories", []) or [],
+        reference_ids=reference_ids,
+    )
+    return page.model_dump()
+
+
+def render_event_pages(
+    cfg: Dict[str, Any],
+    llm: LLMClient,
+    only_event_ids: set | None = None,
+    incremental: bool = False,
+) -> Path:
+    """Render one Wikipedia-style page per historical event.
+
+    Events live only in ``events.jsonl`` and otherwise have no article, so the
+    timeline cannot link to them. This renders each event into a page (merged
+    into ``pages.jsonl`` alongside entity pages) so every event becomes a
+    browsable article. By default every event is rendered; with
+    ``incremental=True`` only events without a page are rendered; with
+    ``only_event_ids`` exactly those events are (re)rendered. Page ids are
+    stable across runs and the timeline links by matching page title to event
+    name, so existing event pages are reused rather than regenerated.
+    """
+    paths = _paths(cfg)
+    entities = read_jsonl(paths["entities"])
+    events = read_jsonl(paths["events"])
+    sources = read_jsonl(paths["sources"])
+    bible = read_json(paths["bible"]) if paths["bible"].exists() else {}
+    ent_by_id = {e["entity_id"]: e for e in entities}
+    evt_by_id = {e["event_id"]: e for e in events}
+    world_context = _world_context(bible)
+    src_ids = {s["source_id"] for s in sources}
+
+    lengths = {
+        "min_sections": int(cfg.get("render", {}).get("min_sections", 4)),
+        "max_sections": int(cfg.get("render", {}).get("max_sections", 7)),
+        "min_paras": int(cfg.get("render", {}).get("min_paragraphs", 2)),
+        "max_paras": int(cfg.get("render", {}).get("max_paragraphs", 4)),
+        "max_tokens": int(cfg.get("render", {}).get("max_tokens", 6000)),
+    }
+
+    existing_pages = read_jsonl(paths["pages"])
+    event_pageid = {
+        p["event_id"]: p["page_id"] for p in existing_pages if p.get("event_id")
+    }
+    used_nums = [
+        int(p["page_id"].split("_")[1])
+        for p in existing_pages
+        if p.get("page_id", "").startswith("page_")
+    ]
+    next_num = max(used_nums, default=0) + 1
+
+    # Decide which events to (re)render.
+    if only_event_ids is not None:
+        to_render = [e for e in events if e["event_id"] in only_event_ids]
+    elif incremental:
+        to_render = [e for e in events if e["event_id"] not in event_pageid]
+    else:
+        to_render = events
+
+    # Corpus-wide title -> page_id index so event pages can link to existing
+    # entity pages (and to each other), and assign/reuse stable event page ids.
+    title_to_page: Dict[str, str] = {
+        p["title"].strip().lower(): p["page_id"] for p in existing_pages
+    }
+    for e in to_render:
+        evid = e["event_id"]
+        if evid not in event_pageid:
+            event_pageid[evid] = make_id("page", next_num)
+            next_num += 1
+        title_to_page[e["name"].strip().lower()] = event_pageid[evid]
+
+    candidate_titles = [p["title"] for p in existing_pages] + [
+        e["name"] for e in to_render
+    ]
+
+    rendered: Dict[str, Dict[str, Any]] = {}
+    for ev in to_render:
+        page = _render_one_event_page(
+            ev, event_pageid[ev["event_id"]],
+            llm=llm, sources=sources, ent_by_id=ent_by_id, evt_by_id=evt_by_id,
+            world_context=world_context, title_to_page=title_to_page,
+            candidate_titles=candidate_titles, src_ids=src_ids, lengths=lengths,
+        )
+        if page:
+            rendered[ev["event_id"]] = page
+            print(f"[render] {page['page_id']}: {ev['name']} (event)")
+
+    # Merge: keep existing pages (re-rendered events replaced), append new ones.
+    pages: List[Dict[str, Any]] = []
+    seen: set = set()
+    for p in existing_pages:
+        evid = p.get("event_id")
+        pages.append(rendered.get(evid, p) if evid in rendered else p)
+        if evid:
+            seen.add(evid)
+    for ev in to_render:
+        evid = ev["event_id"]
+        if evid in rendered and evid not in seen:
+            pages.append(rendered[evid])
+            seen.add(evid)
+
+    _write_pages_and_side_tables(paths, pages)
+    print(f"[stage7-events] pages -> {paths['pages']} ({len(pages)})")
     return paths["pages"]
